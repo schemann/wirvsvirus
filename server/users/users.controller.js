@@ -6,6 +6,7 @@ module.exports = router;
 
 router.post('/authenticate', authenticate);
 router.post('/register', register);
+router.post('/setHomeBase', setHomeBase)
 router.get('/getAll', getAll);
 router.get('/current', getCurrent);
 router.get('/:id', getById);
@@ -15,6 +16,12 @@ router.put('/:id', update);
 function authenticate(req, res, next) {
     userService.authenticate(req.body)
         .then(user => user ? res.json(user) : res.status(400).json({message: 'Username or password is incorrect'}))
+        .catch(err => next(err));
+}
+
+function setHomeBase(req, res, next) {
+    userService.setHomeBase(req.body, req.user.sub)
+        .then(user => user ? res.json(user): res.status(422).json({message: 'Homebase already set'}))
         .catch(err => next(err));
 }
 

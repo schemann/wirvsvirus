@@ -2,7 +2,6 @@ const config = require('../config.json');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const db = require('../_helpers/db');
-
 const User = db.User;
 
 module.exports = {
@@ -11,6 +10,7 @@ module.exports = {
     getById,
     create,
     update,
+    setHomeBase,
     delete: _delete
 };
 
@@ -30,7 +30,25 @@ async function getAll() {
 }
 
 async function getById(id) {
-    return await User.findById(id).select('-hash');
+    return await User.findById(id)
+    .select('-hash')
+    .select('-homeBaseSetDate');
+}
+
+async function setHomeBase({longitude, latitude}, id) {
+    const user = await User.findById(id);
+    console.log(user);
+    if (user === null) {
+        throw 'User does not exsits';
+    }
+
+    if (user.homeBase.longitude !== null && user.homeBase.latitude !== null) {
+        throw 'Homebase is already set';
+    }
+    
+    user.homeBase = {longitude, latitude};
+    user.homeBaseSetDate = Date.now();
+    return await user.save();
 }
 
 async function create(userParam) {
