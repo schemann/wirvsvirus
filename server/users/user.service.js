@@ -48,7 +48,8 @@ async function setHomeBase({longitude, latitude}, id) {
     
     user.homeBase = {longitude, latitude};
     user.homeBaseSetDate = Date.now();
-    return await user.save();
+    user.save();
+    return await User.findById(id).select('-hash');
 }
 
 async function create(userParam) {
