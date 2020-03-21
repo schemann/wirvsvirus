@@ -31,10 +31,13 @@ public class GPSTextStatus : MonoBehaviour
         if (data.Status == LocationServiceStatus.Running)
         {
             textMesh.text = "Longitude: " + data.Longitude + " Latitude: " + data.Latitude + " Accurracy: " + data.Accurracy;
+        } else if (data.Status == LocationServiceStatus.Initializing)
+        {
+            textMesh.text = "Waiting for GPS-Data";
         }
         else
         {
-            textMesh.text = "No GPS Data available";
+            textMesh.text = "Device or GPS Data not available";
         }
     }
 }

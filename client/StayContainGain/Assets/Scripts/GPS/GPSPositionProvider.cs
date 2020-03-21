@@ -59,6 +59,7 @@ public class GPSPositionProvider : MonoBehaviour
 
     private IEnumerator UpdateGPS()
     {
+
         // Access granted and location value could be retrieved
         Status = "Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.horizontalAccuracy;
         OnPositionChanged(new GpsPositionData()
@@ -80,12 +81,16 @@ public class GPSPositionProvider : MonoBehaviour
         // First, check if user has location service enabled
         if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation))
         {
-            Status = "Location service disabled by user";
+            Status = "Location service disabled by user"; 
+            OnPositionChanged(new GpsPositionData()
+            {
+                Status = LocationServiceStatus.Failed
+            });
             yield break;
         }
 
         // Start service before querying location
-        Input.location.Start();
+        Input.location.Start(10.0f, 3.0f);
 
         // Wait until service initializes
         int maxWait = 20;
@@ -93,6 +98,10 @@ public class GPSPositionProvider : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
             Status = "Wait for location";
+            OnPositionChanged(new GpsPositionData()
+            {
+                Status = LocationServiceStatus.Initializing
+            });
             maxWait--;
         }
 
@@ -100,6 +109,10 @@ public class GPSPositionProvider : MonoBehaviour
         if (maxWait < 1)
         {
             Status = "Timed out";
+            OnPositionChanged(new GpsPositionData()
+            {
+                Status = LocationServiceStatus.Failed
+            });
             yield break;
         }
 
