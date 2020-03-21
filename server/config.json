@@ -1,0 +1,4 @@
+{
+    "conntectionString": "mongodb://localhost/wirvsVirus",
+    "secret": "WILL ON SERVER REPLACED BY ENV VAR"
+}
