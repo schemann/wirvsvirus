@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Android;
 
@@ -6,9 +7,39 @@ public class GpsPositionData
 {
     public float Latitude { get; set; }
     public float Longitude { get; set; }
+
     public float Accurracy { get; set; }
 
     public LocationServiceStatus Status { get; set; }
+
+    public double DistanceTo(GpsPositionData gpsPositionData)
+    {
+        return DistanceTo(gpsPositionData.Latitude, gpsPositionData.Longitude);
+    }
+
+    public double DistanceTo( double lat2, double lon2, char unit = 'M')
+    {
+        double rlat1 = Math.PI * Latitude / 180;
+        double rlat2 = Math.PI * lat2 / 180;
+        double theta = Longitude - lon2;
+        double rtheta = Math.PI * theta / 180;
+        double dist =
+            Math.Sin(rlat1) * Math.Sin(rlat2) + Math.Cos(rlat1) *
+            Math.Cos(rlat2) * Math.Cos(rtheta);
+        dist = Math.Acos(dist);
+        dist = dist * 180 / Math.PI;
+        dist = dist * 60 * 1.1515;
+
+        switch (unit)
+        {
+            case 'M': //Meters -> default
+                return dist * 1609.344;
+            case 'K': //Kilometers -> default
+                return dist * 1.609344;
+        }
+
+        return dist;
+    }
 }
 
 public delegate void PositionChangedDelegate(GpsPositionData data);

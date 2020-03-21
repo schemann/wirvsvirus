@@ -30,7 +30,8 @@ public class GPSTextStatus : MonoBehaviour
     {
         if (data.Status == LocationServiceStatus.Running)
         {
-            textMesh.text = "Longitude: " + data.Longitude + " Latitude: " + data.Latitude + " Accurracy: " + data.Accurracy;
+            var distance = data.DistanceTo(48.1230335, 11.5363742);
+            textMesh.text = "Longitude: " + data.Longitude + " Latitude: " + data.Latitude + " Accurracy: " + data.Accurracy + " Distance: " + distance;
         } else if (data.Status == LocationServiceStatus.Initializing)
         {
             textMesh.text = "Waiting for GPS-Data";
