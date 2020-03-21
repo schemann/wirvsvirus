@@ -21,7 +21,7 @@ function authenticate(req, res, next) {
 }
 
 function setHomeBase(req, res, next) {
-    userService.setHomeBase(req.body, req.user.sub)
+    userService.setHomeBase(req.body, req.user.sub, req.query.override)
         .then(user => user ? res.json(user): res.status(422).json({message: 'Homebase already set'}))
         .catch(err => next(err));
 }

@@ -37,17 +37,21 @@ async function getById(id) {
     .select('-homeBaseSetDate');
 }
 
-async function setHomeBase({longitude, latitude}, id) {
+async function setHomeBase({longitude, latitude}, id, override) {
     const user = await User.findById(id);
     console.log(user);
     if (user === null) {
         throw 'User does not exsits';
     }
 
-    if (user.homeBase.longitude !== null && user.homeBase.latitude !== null) {
-        throw 'Homebase is already set';
+    if (override !== 'true') {
+        if (user.homeBase.longitude !== null && user.homeBase.latitude !== null) {
+            throw 'Homebase is already set';
+        }
+        user.currentXP = user.currentXP + 100;
     }
-    user.currentXP = user.currentXP + 100;
+    
+    
     user.homeBase = {longitude, latitude};
     user.homeBaseSetDate = Date.now();
     user.lastHomePingDate = Date.now();
