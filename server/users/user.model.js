@@ -8,6 +8,7 @@ const userSchema = new Schema({
     createdDate: {type: Date, default: Date.now},
     homeBase: {longitude: {type: Number, default: null}, latitude: {type: Number, default: null}},
     homeBaseSetDate: {type: Date, default: null},
+    lastHomePingDate: {type: Date, default: null},
     currentLevel: {type: Number, default: 0},
     currentXP: {type: Number, default: 0},
     friendList: {type: [String], default: []},

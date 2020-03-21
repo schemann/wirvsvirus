@@ -2,6 +2,7 @@ const config = require('../config.json');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const db = require('../_helpers/db');
+const distance = require('gps-distance');
 const User = db.User;
 
 module.exports = {
@@ -11,6 +12,7 @@ module.exports = {
     create,
     update,
     setHomeBase,
+    pingHomeBase,
     delete: _delete
 };
 
@@ -45,10 +47,29 @@ async function setHomeBase({longitude, latitude}, id) {
     if (user.homeBase.longitude !== null && user.homeBase.latitude !== null) {
         throw 'Homebase is already set';
     }
-    
+    user.currentXP = user.currentXP + 100;
     user.homeBase = {longitude, latitude};
     user.homeBaseSetDate = Date.now();
-    user.save();
+    user.lastHomePingDate = Date.now();
+    await user.save();
+    return await User.findById(id).select('-hash');
+}
+
+async function pingHomeBase({longitude, latitude}, id) {
+    const user = await User.findById(id);
+    if (user === null) {
+        throw 'User does not exsits';
+    }
+    if (user.homeBase.longitude === null || user.homeBase.latitude === null) {
+        throw 'No Homebase set';
+    }
+
+    const dist = Math.abs(distance(latitude, longitude, user.homeBase.latitude, user.homeBase.longitude));
+
+    if (dist <= 0.2) {
+        user.currentXP += 100;
+    }
+    await user.save();
     return await User.findById(id).select('-hash');
 }
 

@@ -7,6 +7,7 @@ module.exports = router;
 router.post('/authenticate', authenticate);
 router.post('/register', register);
 router.post('/setHomeBase', setHomeBase)
+router.post('/pingHomeBase', pingHomeBase);
 router.get('/getAll', getAll);
 router.get('/current', getCurrent);
 router.get('/:id', getById);
@@ -35,6 +36,12 @@ function register(req, res, next) {
 function getAll(req, res, next) {
     userService.getAll()
         .then(users => res.json(users))
+        .catch(err => next(err));
+}
+
+function pingHomeBase(req, res, next) {
+    userService.pingHomeBase(req.body, req.user.sub)
+        .then(user => user ? res.json(user) : res.status(422).json({}))
         .catch(err => next(err));
 }
 
