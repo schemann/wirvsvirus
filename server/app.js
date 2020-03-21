@@ -14,6 +14,7 @@ app.use(cors());
 app.use(jwt());
 
 app.use('/api/users', require('./users/users.controller'));
+app.use('/api/invite', require('./invites/invites.controller'));
 
 app.use(errorHandler);
 

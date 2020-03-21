@@ -12,6 +12,8 @@ const userSchema = new Schema({
     currentLevel: {type: Number, default: 0},
     currentXP: {type: Number, default: 0},
     friendList: {type: [String], default: []},
+    openInvites: {type: [{name: {type: String, require: true}, invitedId: {type: String, require: true}}], default: []},
+    createdInvites: {type: [String], default: []},
     equimentList: {type: [String], default: []},
     currentEquimentList: {type: [String], default: []}
 

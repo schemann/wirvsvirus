@@ -5,6 +5,7 @@ mongoose.connect(process.MONGODB_URL || config.conntectionString, {useCreateInde
 mongoose.Promise = global.Promise;
 
 module.exports = {
-    User: require('../users/user.model')
+    User: require('../users/user.model'),
+    Invite: require('../invites/invites.model')
 };
 
