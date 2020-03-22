@@ -13,6 +13,7 @@ module.exports = {
     update,
     setHomeBase,
     pingHomeBase,
+    removeFriend,
     delete: _delete
 };
 
@@ -112,3 +113,17 @@ async function _delete(id) {
     await User.findByIdAndRemove(id);
 }
 
+async function removeFriend(userID, friendId) {
+    const user = await User.findById(userID);
+    const friend = await User.findById(friendId);
+
+    if (user === null || friend === null) {
+        throw 'one of the user did not exsits';
+    }
+
+    user.friendList = user.friendList.filter( obj => obj !== friend.id);
+    friend.friendList =  friend.friendList.filter(obj => obj !== user.id);
+
+    await user.save();
+    await friend.save();
+}

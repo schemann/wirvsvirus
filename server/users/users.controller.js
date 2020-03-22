@@ -12,6 +12,7 @@ router.get('/getAll', getAll);
 router.get('/current', getCurrent);
 router.get('/:id', getById);
 router.put('/:id', update);
+router.post('/removeFriend/:id', removeFriend);
 
 
 function authenticate(req, res, next) {
@@ -61,6 +62,12 @@ function update(req, res, next) {
     userService.update(req.params.id, req.body)
         .then(() => res.json({}))
         .catch(err => res.json({}));
+}
+
+function removeFriend(req,  res, next) {
+    userService.removeFriend(req.user.sub, req.params.id)
+        .then(() => res.json({}))
+        .catch(err => next(err));
 }
 
 function _delete(req, res, next) {
