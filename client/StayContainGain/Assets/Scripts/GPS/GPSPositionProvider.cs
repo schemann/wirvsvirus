@@ -91,6 +91,7 @@ public class GPSPositionProvider : MonoBehaviour
     private IEnumerator UpdateGPS()
     {
 
+#if UNITY_STANDALONE
         // Access granted and location value could be retrieved
         Status = "Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.horizontalAccuracy;
         OnPositionChanged(new GpsPositionData()
@@ -100,13 +101,25 @@ public class GPSPositionProvider : MonoBehaviour
             Accurracy = Input.location.lastData.horizontalAccuracy,
             Status = LocationServiceStatus.Running
         });
-
+#endif
         yield return null;
 
     }
 
     private IEnumerator StartService()
     {
+#if UNITY_EDITOR
+        Status = "Dummy Location Provided";
+        OnPositionChanged(new GpsPositionData()
+        {
+            Status = LocationServiceStatus.Running,
+            Latitude = 48.1230335f,
+            Longitude = 11.5363742f
+        });
+#endif
+
+
+
         Status = "Init GPS...";
 
         // First, check if user has location service enabled
