@@ -10,11 +10,13 @@ public class MainMenu : MonoBehaviour
         Login,
         Register,
         Recover,
-        Game
+        Game,
+        CharacterCreate
     }
 
     [SerializeField] private Menu _login;
     [SerializeField] private Menu _register;
+    [SerializeField] private Menu _create;
 
     private Menu _activeMenu;
 
@@ -22,6 +24,7 @@ public class MainMenu : MonoBehaviour
     {
         _login.Activate();
         _register.Deactivate();
+        _create.Deactivate();
 
         _activeMenu = _login;
     }
@@ -43,6 +46,11 @@ public class MainMenu : MonoBehaviour
                 break;
             case eMenu.Recover:
                 _activeMenu.Deactivate(fadeTime);
+                break;
+            case eMenu.CharacterCreate:
+                _activeMenu.Deactivate(fadeTime);
+                _create.Activate(fadeTime);
+                _activeMenu = _create;
                 break;
         }
     }
