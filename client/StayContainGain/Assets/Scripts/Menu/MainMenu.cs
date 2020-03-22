@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour
 
     private Menu _activeMenu;
 
-    void Awake()
+    void Start()
     {
         _login.Activate();
         _register.Deactivate();
