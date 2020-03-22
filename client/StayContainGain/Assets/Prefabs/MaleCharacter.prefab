@@ -48,7 +48,7 @@ MonoBehaviour:
   hautFarbe: {r: 0.95699996, g: 0.70646155, b: 0.546447, a: 1}
   anzugFarbe: {r: 0, g: 0.1812067, b: 1, a: 1}
   schuheFarbe: {r: 0.3018868, g: 0.1408143, b: 0.07262371, a: 1}
-  zeichenFarbe: {r: 1, g: 0, b: 0.16760445, a: 1}
+  zeichenFarbe: {r: 1, g: 0, b: 0.03164482, a: 1}
   Kopfbedeckungen:
   - {fileID: 2686508280267378275}
   Haut:
@@ -161,7 +161,7 @@ PrefabInstance:
     - target: {fileID: 693189330074479299, guid: 9b316d38980dfe444b5189dff7959bef,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.17260075
+      value: 0.010321617
       objectReference: {fileID: 0}
     - target: {fileID: 693189330074479299, guid: 9b316d38980dfe444b5189dff7959bef,
         type: 3}
@@ -236,7 +236,7 @@ PrefabInstance:
     - target: {fileID: 5374695380621614271, guid: 9b316d38980dfe444b5189dff7959bef,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.17260075
+      value: 0.010321617
       objectReference: {fileID: 0}
     - target: {fileID: 6893454605001555965, guid: 9b316d38980dfe444b5189dff7959bef,
         type: 3}
@@ -246,7 +246,7 @@ PrefabInstance:
     - target: {fileID: 6893454605001555965, guid: 9b316d38980dfe444b5189dff7959bef,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.17260075
+      value: 0.010321617
       objectReference: {fileID: 0}
     - target: {fileID: 6893454605001555965, guid: 9b316d38980dfe444b5189dff7959bef,
         type: 3}

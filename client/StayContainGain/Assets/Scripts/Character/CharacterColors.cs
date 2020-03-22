@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class CharacterColors : MonoBehaviour
 {
     [Header("Farben")]
@@ -65,7 +66,6 @@ public class CharacterColors : MonoBehaviour
     }
 
 
-    [ExecuteInEditMode]
     // Update is called once per frame
     void Update()
     {
@@ -74,7 +74,6 @@ public class CharacterColors : MonoBehaviour
 #endif
     }
 
-    [ContextMenu("Aktualisiere Farben")]
     void UpdateColors()
     {
         foreach(var sr in Kopfbedeckungen)
