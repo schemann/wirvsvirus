@@ -17,6 +17,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Menu _login;
     [SerializeField] private Menu _register;
     [SerializeField] private Menu _create;
+    [SerializeField] private Menu _gameMain;
 
     private Menu _activeMenu;
 
@@ -25,6 +26,7 @@ public class MainMenu : MonoBehaviour
         _login.Activate();
         _register.Deactivate();
         _create.Deactivate();
+        _gameMain.Deactivate();
 
         _activeMenu = _login;
     }
@@ -51,6 +53,11 @@ public class MainMenu : MonoBehaviour
                 _activeMenu.Deactivate(fadeTime);
                 _create.Activate(fadeTime);
                 _activeMenu = _create;
+                break;
+            case eMenu.Game:
+                _activeMenu.Deactivate(fadeTime);
+                _gameMain.Activate(fadeTime);
+                _activeMenu = _gameMain;
                 break;
         }
     }
