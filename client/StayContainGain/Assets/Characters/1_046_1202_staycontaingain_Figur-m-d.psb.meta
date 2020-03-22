@@ -1,0 +1,552 @@
+fileFormatVersion: 2
+guid: 9b316d38980dfe444b5189dff7959bef
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 1000
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Mundschutz
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1590
+      y: 7102
+      width: 426
+      height: 358
+    spriteID: 3fe5c1882dc045b4b9f67563044b6106
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 726, y: 3042}
+  - name: MundschutzFarbe
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3223
+      y: 1494
+      width: 272
+      height: 184
+    spriteID: 11e6ae6cdb3d9ef4b8e1bb71c4d35252
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2216, y: -2568}
+  - name: Basecap-lines
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2615
+      y: 3557
+      width: 523
+      height: 358
+    spriteID: 32c5950bb7e254b4c87a7de0bb1145c5
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1771, y: -763}
+  - name: "Farbton/S\xE4ttigung 1"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2615
+      y: 3923
+      width: 520
+      height: 355
+    spriteID: 255a164e6a9eb1d4faf5225805c122a1
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1763, y: -399}
+  - name: Kopf
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1590
+      y: 5760
+      width: 495
+      height: 750
+    spriteID: ed8e1bbf95098b9459ceacbeb6786f1c
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 779, y: 1844}
+  - name: a-l
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3223
+      y: 4
+      width: 441
+      height: 1482
+    spriteID: c0878b51f8ff329419278c59fd20c1dc
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1985, y: -2560}
+  - name: a-r
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3234
+      y: 1826
+      width: 610
+      height: 1539
+    spriteID: 97f3f166fbb4c9d418ad917e98bb8e7b
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3043, y: -639}
+  - name: Body
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1578
+      height: 3842
+    spriteID: 45da700e87668c8428777f1770701df5
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -456, y: -163}
+  - name: SchuheFarbe
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 7302
+      width: 1561
+      height: 536
+    spriteID: 3b26227537daa7b4e93a5e7d24dc7af7
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -466, y: 7107}
+  - name: EmblemFarbe
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1590
+      y: 6518
+      width: 389
+      height: 576
+    spriteID: 9dd80e5313d0ad241866deca5f5414e5
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 582, y: 3522}
+  - name: BodyFarbe
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3854
+      width: 1522
+      height: 3440
+    spriteID: a220cc210e2fc4e48a89a9d09f134c2b
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -192, y: 3270}
+  - name: HautFarbe
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1590
+      y: 3557
+      width: 1017
+      height: 2195
+    spriteID: 33cc393695f4af748a5eb3dc77318335
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 925, y: 1112}
+  - name: Umhang
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1590
+      y: 1826
+      width: 1636
+      height: 1723
+    spriteID: e9b0290ba67b0414f98a858b40798ae7
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1222, y: 239}
+  - name: UmhangFarbe
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1590
+      y: 4
+      width: 1625
+      height: 1814
+    spriteID: 3a685559b1fefb14084a3cbff8ee8fdd
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1216, y: -1593}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 1024
+  importedTextureHeight: 2048
+  documentSize: {x: 2250, y: 4750}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 4096
+  textureActualHeight: 8192
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Mundschutz
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 63
+    mosaicPosition: {x: 0, y: 0}
+  - name: Mundschutz
+    spriteName: Mundschutz
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 3fe5c1882dc045b4b9f67563044b6106
+    layerID: 61
+    mosaicPosition: {x: 1590, y: 7102}
+  - name: MundschutzFarbe
+    spriteName: MundschutzFarbe
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 11e6ae6cdb3d9ef4b8e1bb71c4d35252
+    layerID: 66
+    mosaicPosition: {x: 3223, y: 1494}
+  - name: Cap
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 49
+    mosaicPosition: {x: 0, y: 0}
+  - name: Basecap-lines
+    spriteName: Basecap-lines
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 32c5950bb7e254b4c87a7de0bb1145c5
+    layerID: 48
+    mosaicPosition: {x: 2615, y: 3557}
+  - name: "Farbton/S\xE4ttigung 1"
+    spriteName: "Farbton/S\xE4ttigung 1"
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 255a164e6a9eb1d4faf5225805c122a1
+    layerID: 60
+    mosaicPosition: {x: 2615, y: 3923}
+  - name: Figur
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 44
+    mosaicPosition: {x: 0, y: 0}
+  - name: Kopf
+    spriteName: Kopf
+    isGroup: 0
+    parentIndex: 6
+    spriteID: ed8e1bbf95098b9459ceacbeb6786f1c
+    layerID: 31
+    mosaicPosition: {x: 1590, y: 5760}
+  - name: a-l
+    spriteName: a-l
+    isGroup: 0
+    parentIndex: 6
+    spriteID: c0878b51f8ff329419278c59fd20c1dc
+    layerID: 36
+    mosaicPosition: {x: 3223, y: 4}
+  - name: a-r
+    spriteName: a-r
+    isGroup: 0
+    parentIndex: 6
+    spriteID: 97f3f166fbb4c9d418ad917e98bb8e7b
+    layerID: 33
+    mosaicPosition: {x: 3234, y: 1826}
+  - name: Body
+    spriteName: Body
+    isGroup: 0
+    parentIndex: 6
+    spriteID: 45da700e87668c8428777f1770701df5
+    layerID: 23
+    mosaicPosition: {x: 4, y: 4}
+  - name: SchuheFarbe
+    spriteName: SchuheFarbe
+    isGroup: 0
+    parentIndex: 6
+    spriteID: 3b26227537daa7b4e93a5e7d24dc7af7
+    layerID: 57
+    mosaicPosition: {x: 4, y: 7302}
+  - name: EmblemFarbe
+    spriteName: EmblemFarbe
+    isGroup: 0
+    parentIndex: 6
+    spriteID: 9dd80e5313d0ad241866deca5f5414e5
+    layerID: 56
+    mosaicPosition: {x: 1590, y: 6518}
+  - name: BodyFarbe
+    spriteName: BodyFarbe
+    isGroup: 0
+    parentIndex: 6
+    spriteID: a220cc210e2fc4e48a89a9d09f134c2b
+    layerID: 58
+    mosaicPosition: {x: 4, y: 3854}
+  - name: HautFarbe
+    spriteName: HautFarbe
+    isGroup: 0
+    parentIndex: 6
+    spriteID: 33cc393695f4af748a5eb3dc77318335
+    layerID: 51
+    mosaicPosition: {x: 1590, y: 3557}
+  - name: Umhang
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 53
+    mosaicPosition: {x: 0, y: 0}
+  - name: Umhang
+    spriteName: Umhang
+    isGroup: 0
+    parentIndex: 15
+    spriteID: e9b0290ba67b0414f98a858b40798ae7
+    layerID: 27
+    mosaicPosition: {x: 1590, y: 1826}
+  - name: UmhangFarbe
+    spriteName: UmhangFarbe
+    isGroup: 0
+    parentIndex: 15
+    spriteID: 3a685559b1fefb14084a3cbff8ee8fdd
+    layerID: 55
+    mosaicPosition: {x: 1590, y: 4}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  generateGOHierarchy: 0
+  textureAssetName: 1_046_1202_staycontaingain_Figur-m-d Texture
+  prefabAssetName: 1_046_1202_staycontaingain_Figur-m-d Prefab
+  spriteLibAssetName: 1_046_1202_staycontaingain_Figur-m-d Sprite Lib
+  secondarySpriteTextures: []
