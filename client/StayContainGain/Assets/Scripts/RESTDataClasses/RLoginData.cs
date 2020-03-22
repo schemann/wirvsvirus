@@ -1,4 +1,6 @@
-﻿
+﻿using System;
+
+[Serializable]
 public class RLoginData
 {
     public string username;

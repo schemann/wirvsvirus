@@ -11,6 +11,20 @@ public class MenuAccountRegister : Menu
 
     public void OnRegisterClicked()
     {
+        NetworkManager network = NetworkManager.Instance;
 
+        network.Register(new RLoginData
+        {
+            username ="test",
+            password = "test"
+        })
+        .Then((arg) =>
+        {
+            Debug.Log(JsonUtility.ToJson(arg, true));
+        }
+                )
+        .Catch((arg) => {
+            Debug.Log(JsonUtility.ToJson(arg, true));
+        }); 
     }
 }
